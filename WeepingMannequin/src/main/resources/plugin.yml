@@ -1,0 +1,18 @@
+name: WeepingMannequin
+version: '${project.version}'
+main: com.example.weepingmannequin.WeepingMannequinPlugin
+api-version: '1.21'
+description: Манекены, которые подкрадываются, пока на них не смотрят
+authors: [WeepingMannequin]
+
+commands:
+  mannequin:
+    description: Управление плачущими манекенами
+    usage: /<command> <spawn|remove|list>
+    permission: mannequin.admin
+    aliases: [wm]
+
+permissions:
+  mannequin.admin:
+    description: Доступ к командам /mannequin
+    default: op
