@@ -275,7 +275,7 @@ public final class MannequinTask extends BukkitRunnable {
     private void playFreezeSound(ArmorStand stand, MannequinData d, long now) {
         if (now - d.getLastFreezeSoundMs() < 3000L) return; // защита от мерцания при взгляде на край
         d.setLastFreezeSoundMs(now);
-        Sound sound = random.nextInt(10) < 6 ? Sound.ENTITY_WARDEN_HEARTBEAT : Sound.BLOCK_SCULK_CLICKING;
+        Sound sound = random.nextInt(10) < 6 ? Sound.ENTITY_WARDEN_HEARTBEAT : Sound.BLOCK_SCULK_SENSOR_CLICKING;
         Location l = stand.getLocation();
         double r2 = soundRadius * soundRadius;
         for (Player p : l.getWorld().getPlayers()) {
